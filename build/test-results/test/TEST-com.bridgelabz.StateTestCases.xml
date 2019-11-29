@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-29T11:17:22" hostname="FH400" time="0.235">
+  <properties/>
+  <testcase name="when_Read_CSV_File_Count_Records_Should_Return_True" classname="com.bridgelabz.StateTestCases" time="0.235"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
