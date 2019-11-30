@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T05:17:09" hostname="FH400" time="0.135">
+<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T06:27:03" hostname="FH400" time="0.301">
   <properties/>
-  <testcase name="when_InCorrect_CSV_FileType_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.135"/>
-  <system-out><![CDATA[Please Enter type of File
+  <testcase name="when_Correct_CSV_File_But_Delimiter_Incorrect_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.301"/>
+  <system-out><![CDATA[37
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

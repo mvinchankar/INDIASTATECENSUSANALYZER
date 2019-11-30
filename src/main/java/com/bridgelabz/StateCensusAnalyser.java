@@ -14,7 +14,7 @@ import java.util.Iterator;
 
 
 public class StateCensusAnalyser {
-    private static final String SAMPLE_CSV_FILE_PATH="/home/slot1/StateCensusData.csv";
+    private static final String SAMPLE_CSV_FILE_PATH="/home/slot1/StateCode.csv";
     public static int getCountOfRecords() throws CustomException, IOException {
         int count=0;
         try {
@@ -31,10 +31,8 @@ public class StateCensusAnalyser {
                 CSVStates csvStates = myUserIterator.next();
                 count++;
             }
-        }  catch (NoSuchFileException e) {
-            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE, "Please Enter Proper File Path or Type", e);
-        } catch (RuntimeException e){
-            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE,"Please Enter type of File",e);
+        }catch (NoSuchFileException e) {
+            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE,"Please Enter Proper File Path or Type",e);
         }
         System.out.println(count);
         return count;
