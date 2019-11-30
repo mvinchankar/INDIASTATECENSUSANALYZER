@@ -112,5 +112,17 @@ public class StateTestCases {
         }
 
     }
+    @Test
+    public void when_Correct_State_Census_CSV_File_But_Header_Incorrect_Should_Return_False() throws IOException {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            Assert.assertEquals(29, stateCensusAnalyser.getCountOfRecordsForStateCensusCsv());
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
+            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+        }
+
+    }
+
 
 }
