@@ -33,6 +33,8 @@ public class StateCensusAnalyser {
             }
         }catch (NoSuchFileException e) {
             throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE,"Please Enter Proper File Path or Type",e);
+        } catch (RuntimeException e){
+            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE,"ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER",e);
         }
         System.out.println(count);
         return count;

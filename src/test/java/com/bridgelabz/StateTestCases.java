@@ -27,7 +27,7 @@ public class StateTestCases {
             Assert.assertEquals(37, stateCensusAnalyser.getCountOfRecords());
         } catch (CustomException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.NO_SUCH_FILE,e.type);
+            Assert.assertEquals(CustomException.ExceptionType.NO_SUCH_FILE, e.type);
         }
 
     }
@@ -43,6 +43,7 @@ public class StateTestCases {
         }
 
     }
+
     @Test
     public void when_Correct_CSV_File_But_Delimiter_Incorrect_Should_Return_False() throws IOException {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
