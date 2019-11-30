@@ -14,9 +14,10 @@ import java.util.Iterator;
 
 
 public class StateCensusAnalyser {
-    private static final String SAMPLE_CSV_FILE_PATH="/home/slot1/StateCensusData.csv";
+    private static final String SAMPLE_CSV_FILE_PATH = "/home/slot1/StateCensusData.csv";
+
     public static int getCountOfRecords() throws CustomException, IOException {
-        int count=0;
+        int count = 0;
         try {
 
             Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
@@ -31,16 +32,17 @@ public class StateCensusAnalyser {
                 CSVStates csvStates = myUserIterator.next();
                 count++;
             }
-        }catch (NoSuchFileException e) {
-            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE,"Please Enter Proper File Path or Type",e);
-        } catch (RuntimeException e){
-            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE,"ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER",e);
+        } catch (NoSuchFileException e) {
+            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE, "Please Enter Proper File Path or Type", e);
+        } catch (RuntimeException e) {
+            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE, "ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER", e);
         }
         System.out.println(count);
         return count;
     }
-public static int getCountOfRecordsForStateCensusCsv() throws CustomException {
-        int count=0;
+
+    public static int getCountOfRecordsForStateCensusCsv() throws CustomException {
+        int count = 0;
         try {
 
             Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
@@ -55,12 +57,14 @@ public static int getCountOfRecordsForStateCensusCsv() throws CustomException {
                 CSVStateCensus csvStates = myUserIterator.next();
                 count++;
             }
-        }catch (NoSuchFileException e) {
-            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE,"Please Enter Proper File Path or Type",e);
+        } catch (NoSuchFileException e) {
+            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE, "Please Enter Proper File Path or Type", e);
+        } catch (RuntimeException e) {
+            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE, "ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER", e);
         } catch (IOException e) {
             e.printStackTrace();
         }
-    System.out.println(count);
+        System.out.println(count);
         return count;
     }
 
