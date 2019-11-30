@@ -66,4 +66,12 @@ public class StateTestCases {
         }
 
     }
+    //    ******************************************************************************************************************
+    @Test
+    public void when_Read_State_Census_CSV_File_Count_Records_Should_Return_True() {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        Assert.assertEquals(29, stateCensusAnalyser.getCountOfRecordsForStateCensusCsv());
+    }
+
+
 }

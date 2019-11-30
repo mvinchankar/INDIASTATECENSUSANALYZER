@@ -14,7 +14,7 @@ import java.util.Iterator;
 
 
 public class StateCensusAnalyser {
-    private static final String SAMPLE_CSV_FILE_PATH="/home/slot1/StateCode.csv";
+    private static final String SAMPLE_CSV_FILE_PATH="/home/slot1/StateCensusData.csv";
     public static int getCountOfRecords() throws CustomException, IOException {
         int count=0;
         try {
@@ -37,6 +37,28 @@ public class StateCensusAnalyser {
             throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE,"ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER",e);
         }
         System.out.println(count);
+        return count;
+    }
+public static int getCountOfRecordsForStateCensusCsv() {
+        int count=0;
+        try {
+
+            Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
+            CsvToBean<CSVStateCensus> csvToBean = new CsvToBeanBuilder(reader)
+                    .withIgnoreLeadingWhiteSpace(true)
+                    .withType(CSVStateCensus.class)
+                    .build();
+
+
+            Iterator<CSVStateCensus> myUserIterator = csvToBean.iterator();
+            while (myUserIterator.hasNext()) {
+                CSVStateCensus csvStates = myUserIterator.next();
+                count++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    System.out.println(count);
         return count;
     }
 

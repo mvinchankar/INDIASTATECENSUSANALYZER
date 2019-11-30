@@ -1,9 +1,15 @@
 package com.bridgelabz;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class CSVStates {
+    @CsvBindByName(column = "Sr.No")
     private String stateName;
+    @CsvBindByName(column = "StateName")
     private String srNo;
+    @CsvBindByName(column = "StateCode")
     private String stateCode;
+    @CsvBindByName(column = "TIN")
     private String stateTIN;
 
     public String getStateName() {
