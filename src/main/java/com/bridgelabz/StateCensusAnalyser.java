@@ -36,6 +36,7 @@ public class StateCensusAnalyser {
         } catch (RuntimeException e){
             throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE,"Please Enter type of File",e);
         }
+        System.out.println(count);
         return count;
     }
 
