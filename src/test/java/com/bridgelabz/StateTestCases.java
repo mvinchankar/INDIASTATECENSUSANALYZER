@@ -55,6 +55,7 @@ public class StateTestCases {
         }
 
     }
+
     @Test
     public void when_Correct_CSV_File_But_Header_Incorrect_Should_Return_False() throws IOException {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
@@ -66,12 +67,28 @@ public class StateTestCases {
         }
 
     }
+
     //    ******************************************************************************************************************
     @Test
     public void when_Read_State_Census_CSV_File_Count_Records_Should_Return_True() {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
-        Assert.assertEquals(29, stateCensusAnalyser.getCountOfRecordsForStateCensusCsv());
+        try {
+            Assert.assertEquals(29, stateCensusAnalyser.getCountOfRecordsForStateCensusCsv());
+        } catch (CustomException e) {
+            e.printStackTrace();
+        }
     }
 
+    @Test
+    public void when_Incorrect_State_Census_CSV_File_Should_Return_False() throws IOException {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            Assert.assertEquals(29, stateCensusAnalyser.getCountOfRecords());
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
+            Assert.assertEquals(CustomException.ExceptionType.NO_SUCH_FILE, e.type);
+        }
+
+    }
 
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T11:46:44" hostname="FH400" time="0.429">
+<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T11:56:22" hostname="FH400" time="0.221">
   <properties/>
-  <testcase name="when_Read_State_Census_CSV_File_Count_Records_Should_Return_True" classname="com.bridgelabz.StateTestCases" time="0.429"/>
+  <testcase name="when_Incorrect_State_Census_CSV_File_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.221"/>
   <system-out><![CDATA[29
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -39,7 +39,7 @@ public class StateCensusAnalyser {
         System.out.println(count);
         return count;
     }
-public static int getCountOfRecordsForStateCensusCsv() {
+public static int getCountOfRecordsForStateCensusCsv() throws CustomException {
         int count=0;
         try {
 
@@ -55,6 +55,8 @@ public static int getCountOfRecordsForStateCensusCsv() {
                 CSVStateCensus csvStates = myUserIterator.next();
                 count++;
             }
+        }catch (NoSuchFileException e) {
+            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE,"Please Enter Proper File Path or Type",e);
         } catch (IOException e) {
             e.printStackTrace();
         }
