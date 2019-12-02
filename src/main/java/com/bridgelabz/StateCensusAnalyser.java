@@ -14,26 +14,40 @@ import java.util.Iterator;
 
 
 public class StateCensusAnalyser {
-    private static final String SAMPLE_CSV_FILE_PATH = "/home/slot1/StateCensusData.csv";
 
-    public static int getCountOfRecords() throws CustomException, IOException {
+    public static <T> CsvToBean OpenCSVBuilder(String filename, String classname) {
+        int count = 0;
+        Iterator<T> csvDataIterator = null;
+        CsvToBean<T> csvToBean;
+        try {
+
+            Class classTemp = Class.forName(classname);
+            Reader reader = Files.newBufferedReader(Paths.get(filename));
+
+            csvToBean = new CsvToBeanBuilder(reader)
+                    .withType(Class.forName(classname))
+                    .withIgnoreLeadingWhiteSpace(true)
+                    .build();
+
+            //csvDataIterator = csvToBean.iterator();
+            return csvToBean;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static int getCountOfRecords(String SAMPLE_CSV_FILE_PATH, String classname) throws CustomException, IOException {
         int count = 0;
         try {
 
-            Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
-            CsvToBean<CSVStates> csvToBean = new CsvToBeanBuilder(reader)
-                    .withIgnoreLeadingWhiteSpace(true)
-                    .withType(CSVStates.class)
-                    .build();
-
-
-            Iterator<CSVStates> myUserIterator = csvToBean.iterator();
+            Iterator<CSVStates> myUserIterator = (Iterator<CSVStates>) OpenCSVBuilder(SAMPLE_CSV_FILE_PATH, classname);
             while (myUserIterator.hasNext()) {
                 CSVStates csvStates = myUserIterator.next();
                 count++;
             }
-        } catch (NoSuchFileException e) {
-            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE, "Please Enter Proper File Path or Type", e);
         } catch (RuntimeException e) {
             throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE, "ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER", e);
         }
@@ -41,31 +55,5 @@ public class StateCensusAnalyser {
         return count;
     }
 
-    public static int getCountOfRecordsForStateCensusCsv() throws CustomException {
-        int count = 0;
-        try {
-
-            Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
-            CsvToBean<CSVStateCensus> csvToBean = new CsvToBeanBuilder(reader)
-                    .withIgnoreLeadingWhiteSpace(true)
-                    .withType(CSVStateCensus.class)
-                    .build();
-
-
-            Iterator<CSVStateCensus> myUserIterator = csvToBean.iterator();
-            while (myUserIterator.hasNext()) {
-                CSVStateCensus csvStates = myUserIterator.next();
-                count++;
-            }
-        } catch (NoSuchFileException e) {
-            throw new CustomException(CustomException.ExceptionType.NO_SUCH_FILE, "Please Enter Proper File Path or Type", e);
-        } catch (RuntimeException e) {
-            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE, "ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER", e);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(count);
-        return count;
-    }
 
 }

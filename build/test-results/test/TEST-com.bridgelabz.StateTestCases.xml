@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T12:04:17" hostname="FH400" time="0.511">
+<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-02T04:31:46" hostname="FH400" time="0.271">
   <properties/>
-  <testcase name="when_Correct_State_Census_CSV_File_But_Header_Incorrect_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.511"/>
-  <system-out><![CDATA[29
+  <testcase name="when_Correct_State_Census_CSV_File_But_Header_Incorrect_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.271"/>
+  <system-out><![CDATA[Class:class com.bridgelabz.CSVStateCensus
+ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
