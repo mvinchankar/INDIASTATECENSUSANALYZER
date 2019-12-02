@@ -1,9 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-02T04:31:46" hostname="FH400" time="0.271">
+<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-02T06:25:52" hostname="FH400" time="0.293">
   <properties/>
-  <testcase name="when_Correct_State_Census_CSV_File_But_Header_Incorrect_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.271"/>
-  <system-out><![CDATA[Class:class com.bridgelabz.CSVStateCensus
-ERROR IN FILE TYPE OR IN FILE DELIMITER OR IN FILE HEADER
+  <testcase name="when_Read_State_Census_CSV_File_Count_Records_Should_Return_True" classname="com.bridgelabz.StateTestCases" time="0.293"/>
+  <system-out><![CDATA[Sr No. : Andaman and Nicobar Islands
+State Name : 1
+State Code : 35
+TIN : AN
+---------------------------
+Sr No. : Andhra Pradesh
+State Name : 2
+State Code : 28
+TIN : AP
+---------------------------
+Sr No. : Andhra Pradesh New
+State Name : 3
+State Code : 37
+TIN : AD
+---------------------------
+Sr No. : Arunachal Pradesh
+State Name : 4
+State Code : 12
+TIN : AR
+---------------------------
+Sr No. : Assam
+State Name : 5
+State Code : 18
+TIN : AS
+---------------------------
+Sr No. : Bihar
+State Name : 6
+State Code : 10
+TIN : BH
+---------------------------
+Sr No. : Chandigarh
+State Name : 7
+State Code : 4
+TIN : CH
+---------------------------
+Sr No. : Chattisgarh
+State Name : 8
+State Code : 22
+TIN : CT
+---------------------------
+Sr No. : Dadra and Nagar Haveli
+State Name : 9
+State Code : 26
+TIN : DN
+---------------------------
+Sr No. : Daman and Diu
+State Name : 10
+State Code : 25
+TIN : DD
+---------------------------
+Sr No. : Delhi
+State Name : 11
+State Code : 7
+TIN : DL
+---------------------------
+Sr No. : Goa
+State Name : 12
+State Code : 30
+TIN : GA
+---------------------------
+Sr No. : Gujarat
+State Name : 13
+State Code : 24
+TIN : GJ
+---------------------------
+Sr No. : Haryana
+State Name : 14
+State Code : 6
+TIN : HR
+---------------------------
+Sr No. : Himachal Pradesh
+State Name : 15
+State Code : 2
+TIN : HP
+---------------------------
+Sr No. : Jammu and Kashmir
+State Name : 16
+State Code : 1
+TIN : JK
+---------------------------
+Sr No. : Jharkhand
+State Name : 17
+State Code : 20
+TIN : JH
+---------------------------
+Sr No. : Karnataka
+State Name : 18
+State Code : 29
+TIN : KA
+---------------------------
+Sr No. : Kerala
+State Name : 19
+State Code : 32
+TIN : KL
+---------------------------
+Sr No. : Lakshadweep Islands
+State Name : 20
+State Code : 31
+TIN : LD
+---------------------------
+Sr No. : Madhya Pradesh
+State Name : 21
+State Code : 23
+TIN : MP
+---------------------------
+Sr No. : Maharashtra
+State Name : 22
+State Code : 27
+TIN : MH
+---------------------------
+Sr No. : Manipur
+State Name : 23
+State Code : 14
+TIN : MN
+---------------------------
+Sr No. : Meghalaya
+State Name : 24
+State Code : 17
+TIN : ME
+---------------------------
+Sr No. : Mizoram
+State Name : 25
+State Code : 15
+TIN : MI
+---------------------------
+Sr No. : Nagaland
+State Name : 26
+State Code : 13
+TIN : NL
+---------------------------
+Sr No. : Odisha
+State Name : 27
+State Code : 21
+TIN : OR
+---------------------------
+Sr No. : Pondicherry
+State Name : 28
+State Code : 34
+TIN : PY
+---------------------------
+Sr No. : Punjab
+State Name : 29
+State Code : 3
+TIN : PB
+---------------------------
+Sr No. : Rajasthan
+State Name : 30
+State Code : 8
+TIN : RJ
+---------------------------
+Sr No. : Sikkim
+State Name : 31
+State Code : 11
+TIN : SK
+---------------------------
+Sr No. : Tamil Nadu
+State Name : 32
+State Code : 33
+TIN : TN
+---------------------------
+Sr No. : Telangana
+State Name : 33
+State Code : 36
+TIN : TS
+---------------------------
+Sr No. : Tripura
+State Name : 34
+State Code : 16
+TIN : TR
+---------------------------
+Sr No. : Uttar Pradesh
+State Name : 35
+State Code : 9
+TIN : UP
+---------------------------
+Sr No. : Uttarakhand
+State Name : 36
+State Code : 5
+TIN : UT
+---------------------------
+Sr No. : West Bengal
+State Name : 37
+State Code : 19
+TIN : WB
+---------------------------
+37
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

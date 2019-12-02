@@ -73,7 +73,7 @@ public class StateTestCases {
     public void when_Read_State_Census_CSV_File_Count_Records_Should_Return_True() throws IOException {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
-            Assert.assertEquals(29, stateCensusAnalyser.getCountOfRecords("/home/slot1/StateCensusData.csv","com.bridgelabz.CSVStateCensus"));
+            Assert.assertEquals(37, stateCensusAnalyser.getCountOfRecords("/home/slot1/StateCode.csv","com.bridgelabz.CSVStates"));
         } catch (CustomException e) {
             Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
         }

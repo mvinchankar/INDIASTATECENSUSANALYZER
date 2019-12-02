@@ -16,8 +16,6 @@ import java.util.Iterator;
 public class StateCensusAnalyser {
 
     public static <T> CsvToBean OpenCSVBuilder(String filename, String classname) {
-        int count = 0;
-        Iterator<T> csvDataIterator = null;
         CsvToBean<T> csvToBean;
         try {
 
@@ -42,10 +40,15 @@ public class StateCensusAnalyser {
     public static int getCountOfRecords(String SAMPLE_CSV_FILE_PATH, String classname) throws CustomException, IOException {
         int count = 0;
         try {
-
-            Iterator<CSVStates> myUserIterator = (Iterator<CSVStates>) OpenCSVBuilder(SAMPLE_CSV_FILE_PATH, classname);
+            CsvToBean<CSVStates> csvToBean=OpenCSVBuilder(SAMPLE_CSV_FILE_PATH, classname);
+            Iterator<CSVStates> myUserIterator = csvToBean.iterator();
             while (myUserIterator.hasNext()) {
                 CSVStates csvStates = myUserIterator.next();
+                System.out.println("Sr No. : " + csvStates.getSrNo());
+                System.out.println("State Name : " + csvStates.getStateName());
+                System.out.println("State Code : " + csvStates.getStateCode());
+                System.out.println("TIN : " + csvStates.getStateTIN());
+                System.out.println("---------------------------");
                 count++;
             }
         } catch (RuntimeException e) {
