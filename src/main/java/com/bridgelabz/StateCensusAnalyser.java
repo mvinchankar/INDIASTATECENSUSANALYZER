@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 
 
 public class StateCensusAnalyser {
-    private static String CsvFilePath = "/home/slot1/IdeaProjects/Indian State Census Analyzer/src/main/resources/BindCsv.csv";
 
     public static <T> CsvToBean OpenCSVBuilder(String filename, String classname) {
         CsvToBean<T> csvToBean;
