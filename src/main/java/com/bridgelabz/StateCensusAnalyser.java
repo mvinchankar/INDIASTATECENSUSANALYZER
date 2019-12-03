@@ -45,7 +45,8 @@ public class StateCensusAnalyser {
                 container.add(csvStateCensus);
                 count++;
             }
-            sortThisListBasedOnStatePopulation(container);
+//            toSort(container);
+            sortThisListBasedOnStatePopulationPPerDensity(container);
             Boolean bool = StateCensusAnalyser.writeToGson(container);
             if (expected == count)
                 return "HAPPY";
@@ -77,6 +78,10 @@ public class StateCensusAnalyser {
     }
     private static void sortThisListBasedOnStatePopulation(List<CSVStateCensus> censusList) {
         Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getPopulation())- Integer.parseInt(s1.getPopulation());
+        censusList.sort(c);
+    }
+    private static void sortThisListBasedOnStatePopulationPPerDensity(List<CSVStateCensus> censusList) {
+        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getDensityPerSqKm())- Integer.parseInt(s1.getDensityPerSqKm());
         censusList.sort(c);
     }
 
