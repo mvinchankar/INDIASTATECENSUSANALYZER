@@ -1,0 +1,176 @@
+{
+  "Andhra Pradesh": {
+    "state": "Andhra Pradesh",
+    "population": "49386799",
+    "areaInSqMs": "162968",
+    "densityPerSqKm": "303"
+  },
+  "Arunachal Pradesh": {
+    "state": "Arunachal Pradesh",
+    "population": "1382611",
+    "areaInSqMs": "",
+    "densityPerSqKm": ""
+  },
+  "Assam": {
+    "state": "Assam",
+    "population": "31169272",
+    "areaInSqMs": "78438",
+    "densityPerSqKm": "397"
+  },
+  "Bihar": {
+    "state": "Bihar",
+    "population": "103804637",
+    "areaInSqMs": "94163",
+    "densityPerSqKm": "1102"
+  },
+  "Chattisgarh": {
+    "state": "Chattisgarh",
+    "population": "25540196",
+    "areaInSqMs": "135191",
+    "densityPerSqKm": "189"
+  },
+  "Goa": {
+    "state": "Goa",
+    "population": "1457723",
+    "areaInSqMs": "3702",
+    "densityPerSqKm": "394"
+  },
+  "Gujarat": {
+    "state": "Gujarat",
+    "population": "60383628",
+    "areaInSqMs": "196024",
+    "densityPerSqKm": "308"
+  },
+  "Haryana": {
+    "state": "Haryana",
+    "population": "25353081",
+    "areaInSqMs": "44212",
+    "densityPerSqKm": "573"
+  },
+  "Himachal Pradesh": {
+    "state": "Himachal Pradesh",
+    "population": "6864602",
+    "areaInSqMs": "55673",
+    "densityPerSqKm": "123"
+  },
+  "Jammu and Kashmir": {
+    "state": "Jammu and Kashmir",
+    "population": "12548926",
+    "areaInSqMs": "222236",
+    "densityPerSqKm": "57"
+  },
+  "Jharkhand": {
+    "state": "Jharkhand",
+    "population": "32966238",
+    "areaInSqMs": "79714",
+    "densityPerSqKm": "414"
+  },
+  "Karnataka": {
+    "state": "Karnataka",
+    "population": "61130704",
+    "areaInSqMs": "191791",
+    "densityPerSqKm": "319"
+  },
+  "Kerala": {
+    "state": "Kerala",
+    "population": "33387677",
+    "areaInSqMs": "38863",
+    "densityPerSqKm": "859"
+  },
+  "Madhya Pradesh": {
+    "state": "Madhya Pradesh",
+    "population": "72597565",
+    "areaInSqMs": "308245",
+    "densityPerSqKm": "236"
+  },
+  "Maharashta": {
+    "state": "Maharashta",
+    "population": "112372972",
+    "areaInSqMs": "307713",
+    "densityPerSqKm": "365"
+  },
+  "Manipur": {
+    "state": "Manipur",
+    "population": "2721756",
+    "areaInSqMs": "22327",
+    "densityPerSqKm": "122"
+  },
+  "Meghalaya": {
+    "state": "Meghalaya",
+    "population": "2964007",
+    "areaInSqMs": "22429",
+    "densityPerSqKm": "132"
+  },
+  "Mizoram": {
+    "state": "Mizoram",
+    "population": "1091014",
+    "areaInSqMs": "21081",
+    "densityPerSqKm": "52"
+  },
+  "Nagaland": {
+    "state": "Nagaland",
+    "population": "1980602",
+    "areaInSqMs": "16579",
+    "densityPerSqKm": "119"
+  },
+  "Odisha": {
+    "state": "Odisha",
+    "population": "41947358",
+    "areaInSqMs": "155707",
+    "densityPerSqKm": "269"
+  },
+  "Punjab": {
+    "state": "Punjab",
+    "population": "27704236",
+    "areaInSqMs": "50362",
+    "densityPerSqKm": "550"
+  },
+  "Rajasthan": {
+    "state": "Rajasthan",
+    "population": "68621012",
+    "areaInSqMs": "342239",
+    "densityPerSqKm": "201"
+  },
+  "Sikkim": {
+    "state": "Sikkim",
+    "population": "607688",
+    "areaInSqMs": "7096",
+    "densityPerSqKm": "86"
+  },
+  "Tamil Nadu": {
+    "state": "Tamil Nadu",
+    "population": "72138958",
+    "areaInSqMs": "130058",
+    "densityPerSqKm": "555"
+  },
+  "Telangana": {
+    "state": "Telangana",
+    "population": "35286757",
+    "areaInSqMs": "114840",
+    "densityPerSqKm": "307"
+  },
+  "Tripura": {
+    "state": "Tripura",
+    "population": "3671032",
+    "areaInSqMs": "10486",
+    "densityPerSqKm": "350"
+  },
+  "Uttar Pradesh": {
+    "state": "Uttar Pradesh",
+    "population": "199812341",
+    "areaInSqMs": "240928",
+    "densityPerSqKm": "828"
+  },
+  "Uttarakhand": {
+    "state": "Uttarakhand",
+    "population": "10116752",
+    "areaInSqMs": "53483",
+    "densityPerSqKm": "189"
+  },
+  "West Bengal": {
+    "state": "West Bengal",
+    "population": "91347736",
+    "areaInSqMs": "88752",
+    "densityPerSqKm": "1029"
+  }
+}

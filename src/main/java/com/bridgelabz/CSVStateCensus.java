@@ -2,9 +2,12 @@ package com.bridgelabz;
 
 import com.opencsv.bean.CsvBindByName;
 
-public class CSVStateCensus {
+import java.util.Comparator;
 
-    @CsvBindByName(column = "State")
+public class CSVStateCensus  {
+
+
+    @CsvBindByName(column = "StateName")
     private String state;
     @CsvBindByName(column = "Population")
     private String population;
@@ -44,4 +47,15 @@ public class CSVStateCensus {
     public void setDensityPerSqKm(String densityPerSqKm) {
         this.densityPerSqKm = densityPerSqKm;
     }
+
+    @Override
+    public String toString() {
+        return "CSVStateCensus{" +
+                ", state='" + state + '\'' +
+                ", population='" + population + '\'' +
+                ", areaInSqMs='" + areaInSqMs + '\'' +
+                ", densityPerSqKm='" + densityPerSqKm + '\'' +
+                '}';
+    }
+
 }
