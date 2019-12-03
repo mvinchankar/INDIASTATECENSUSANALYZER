@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-03T13:11:47" hostname="FH400" time="0.485">
+<testsuite name="com.bridgelabz.StateTestCases" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-03T13:17:17" hostname="FH400" time="0.517">
   <properties/>
-  <testcase name="when_Correct_CSV_File_But_Header_Incorrect_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.485"/>
+  <testcase name="when_Correct_CSV_File_But_Header_Incorrect_Should_Return_False" classname="com.bridgelabz.StateTestCases" time="0.517"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

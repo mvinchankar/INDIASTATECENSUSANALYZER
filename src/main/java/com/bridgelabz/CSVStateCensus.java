@@ -59,6 +59,7 @@ public class CSVStateCensus implements Comparable<CSVStateCensus> {
                 ", densityPerSqKm='" + densityPerSqKm + '\'' +
                 '}';
     }
+
     @Override
     public int compareTo(CSVStateCensus csvStateCensus) {
         return this.getPopulation().compareTo(csvStateCensus.state);
