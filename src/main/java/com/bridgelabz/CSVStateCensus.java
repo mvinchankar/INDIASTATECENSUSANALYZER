@@ -2,9 +2,11 @@ package com.bridgelabz;
 
 import com.opencsv.bean.CsvBindByName;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
-public class CSVStateCensus  {
+public class CSVStateCensus implements Comparable<CSVStateCensus> {
 
 
     @CsvBindByName(column = "StateName")
@@ -57,5 +59,8 @@ public class CSVStateCensus  {
                 ", densityPerSqKm='" + densityPerSqKm + '\'' +
                 '}';
     }
-
+    @Override
+    public int compareTo(CSVStateCensus csvStateCensus) {
+        return this.getPopulation().compareTo(csvStateCensus.state);
+    }
 }
