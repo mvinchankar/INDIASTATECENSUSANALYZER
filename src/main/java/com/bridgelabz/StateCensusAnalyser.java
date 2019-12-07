@@ -46,7 +46,6 @@ public class StateCensusAnalyser {
                 count++;
             }
             bubbleSort(container);
-            //sortThisListBasedOnStateAreaPerSqKms(container);
             Boolean bool = StateCensusAnalyser.writeToGson(container);
             if (expected == count)
                 return "HAPPY";
