@@ -45,7 +45,8 @@ public class StateCensusAnalyser {
                 container.add(csvStateCensus);
                 count++;
             }
-            sortThisListBasedOnStateAreaPerSqKms(container);
+            bubbleSort(container);
+            //sortThisListBasedOnStateAreaPerSqKms(container);
             Boolean bool = StateCensusAnalyser.writeToGson(container);
             if (expected == count)
                 return "HAPPY";
@@ -75,17 +76,32 @@ public class StateCensusAnalyser {
         Comparator<CSVStateCensus> c = (s1, s2) -> s1.getState().compareTo(s2.getState());
         censusList.sort(c);
     }
+
     private static void sortThisListBasedOnStatePopulation(List<CSVStateCensus> censusList) {
-        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getPopulation())- Integer.parseInt(s1.getPopulation());
-        censusList.sort(c);
-    }
-    private static void sortThisListBasedOnStatePopulationPPerDensity(List<CSVStateCensus> censusList) {
-        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getDensityPerSqKm())- Integer.parseInt(s1.getDensityPerSqKm());
-        censusList.sort(c);
-    }
-    private static void sortThisListBasedOnStateAreaPerSqKms(List<CSVStateCensus> censusList) {
-        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getAreaInSqMs())- Integer.parseInt(s1.getAreaInSqMs());
+        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getPopulation()) - Integer.parseInt(s1.getPopulation());
         censusList.sort(c);
     }
 
+    private static void sortThisListBasedOnStatePopulationPPerDensity(List<CSVStateCensus> censusList) {
+        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getDensityPerSqKm()) - Integer.parseInt(s1.getDensityPerSqKm());
+        censusList.sort(c);
+    }
+
+    private static void sortThisListBasedOnStateAreaPerSqKms(List<CSVStateCensus> censusList) {
+        Comparator<CSVStateCensus> c = (s1, s2) -> Integer.parseInt(s2.getAreaInSqMs()) - Integer.parseInt(s1.getAreaInSqMs());
+        censusList.sort(c);
+    }
+
+    private static void bubbleSort(List<CSVStateCensus> csvStateCensuses) {
+        if (csvStateCensuses.size() > 1) {
+            for (int i = 0; i < csvStateCensuses.size(); i++)
+                for (int j = 1; j < csvStateCensuses.size() - i; j++)
+                    if ((csvStateCensuses.get(j - 1).getPopulation().toString()).compareTo(csvStateCensuses.get(j).getPopulation().toString()) > 0) {
+                        // swap temp and arr[i]
+                        CSVStateCensus temp = csvStateCensuses.get(j - 1);
+                        csvStateCensuses.set(j - 1, csvStateCensuses.get(j));
+                        csvStateCensuses.set(j, temp);
+                    }
+        }
+    }
 }
