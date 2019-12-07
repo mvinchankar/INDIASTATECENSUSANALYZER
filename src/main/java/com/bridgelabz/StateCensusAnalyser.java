@@ -96,7 +96,7 @@ public class StateCensusAnalyser {
         if (csvStateCensuses.size() > 1) {
             for (int i = 0; i < csvStateCensuses.size(); i++)
                 for (int j = 1; j < csvStateCensuses.size() - i; j++)
-                    if ((csvStateCensuses.get(j - 1).getAreaInSqMs().toString()).compareTo(csvStateCensuses.get(j).getAreaInSqMs().toString()) > 0) {
+                    if ((csvStateCensuses.get(j - 1).getDensityPerSqKm().toString()).compareTo(csvStateCensuses.get(j).getDensityPerSqKm().toString()) > 0) {
                         // swap temp and arr[i]
                         CSVStateCensus temp = csvStateCensuses.get(j - 1);
                         csvStateCensuses.set(j - 1, csvStateCensuses.get(j));
