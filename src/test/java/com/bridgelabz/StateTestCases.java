@@ -93,5 +93,17 @@ public class StateTestCases {
         }
 
     }
+    @Test
+    public void when_Correct_CSV_File_Report_Area_In_Sqs_Kms_In_Descending_Order() throws IOException {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
+            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+        }
+
+    }
+
 
 }
