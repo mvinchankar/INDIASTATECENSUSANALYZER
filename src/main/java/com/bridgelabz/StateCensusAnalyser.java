@@ -14,7 +14,7 @@ import java.util.*;
 
 public class StateCensusAnalyser {
 
-    public static <T> CsvToBean openCSVBuilder(String filename, String classname) {
+    public static <T> CsvToBean openCSVBuilder(String filename, String classname) throws StateCensusException {
         CsvToBean<T> csvToBean;
         try {
             Reader reader = Files.newBufferedReader(Paths.get(filename));
@@ -24,18 +24,17 @@ public class StateCensusAnalyser {
                     .build();
             return csvToBean;
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new StateCensusException(StateCensusException.ExceptionType.ENTERED_EMPTY, "Input issues", e);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new StateCensusException(StateCensusException.ExceptionType.NO_SUCH_CLASS, "Class issues", e);
         }
-        return null;
     }
 
-    public static String getCountOfRecords(int expected, String SAMPLE_CSV_FILE_PATH1, String classname1) throws StateCensusException, IOException {
+    public static String getCountOfRecords(int expected, String SAMPLE_CSV_FILE_PATH1, String classname1) throws StateCensusException {
         int count = 0;
         ArrayList<CSVStateCensus> container = new ArrayList<>();
         try {
-            CsvToBean<CSVStateCensus> csvToBean1 = OpenCSVBuilder(SAMPLE_CSV_FILE_PATH1, classname1);
+            CsvToBean<CSVStateCensus> csvToBean1 = openCSVBuilder(SAMPLE_CSV_FILE_PATH1, classname1);
             Iterator<CSVStateCensus> myUserIterator = csvToBean1.iterator();
             while (myUserIterator.hasNext()) {
                 CSVStateCensus csvStateCensus = myUserIterator.next();
@@ -54,13 +53,19 @@ public class StateCensusAnalyser {
         }
     }
 
-    private static Boolean writeToGson(List container) throws IOException {
+    private static Boolean writeToGson(List container) throws StateCensusException {
         String SAMPLE_JSON_FILE_PATH = "/home/slot1/IdeaProjects/Indian State Census Analyzer/src/main/resources/Output.json";
         Gson gson = new Gson();
         String json = gson.toJson(container);
-        FileWriter writer = new FileWriter(SAMPLE_JSON_FILE_PATH);
-        writer.write(json);
-        writer.close();
+        FileWriter writer = null;
+        try {
+            writer = new FileWriter(SAMPLE_JSON_FILE_PATH);
+            writer.write(json);
+            writer.close();
+        } catch (IOException e) {
+            throw new StateCensusException(StateCensusException.ExceptionType.ENTERED_EMPTY, "Input issues", e);
+        }
+
         return true;
     }
 
