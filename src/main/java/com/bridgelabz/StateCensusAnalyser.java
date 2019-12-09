@@ -1,23 +1,20 @@
 package com.bridgelabz;
 
 import com.google.gson.Gson;
-import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
-import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class StateCensusAnalyser {
 
-    public static <T> CsvToBean OpenCSVBuilder(String filename, String classname) {
+    public static <T> CsvToBean openCSVBuilder(String filename, String classname) {
         CsvToBean<T> csvToBean;
         try {
             Reader reader = Files.newBufferedReader(Paths.get(filename));
@@ -34,7 +31,7 @@ public class StateCensusAnalyser {
         return null;
     }
 
-    public static String getCountOfRecords(int expected, String SAMPLE_CSV_FILE_PATH1, String classname1) throws CustomException, IOException {
+    public static String getCountOfRecords(int expected, String SAMPLE_CSV_FILE_PATH1, String classname1) throws StateCensusException, IOException {
         int count = 0;
         ArrayList<CSVStateCensus> container = new ArrayList<>();
         try {
@@ -52,7 +49,7 @@ public class StateCensusAnalyser {
             else
                 return "SAD";
         } catch (RuntimeException e) {
-            throw new CustomException(CustomException.ExceptionType.INCORRECT_TYPE, "ERROR IN FILE TYPE OR IN FILE DELIMI" +
+            throw new StateCensusException(StateCensusException.ExceptionType.INCORRECT_TYPE, "ERROR IN FILE TYPE OR IN FILE DELIMI" +
                     "TER OR IN FILE HEADER", e);
         }
     }

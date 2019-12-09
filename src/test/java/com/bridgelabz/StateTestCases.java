@@ -14,9 +14,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.NO_SUCH_FILE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.NO_SUCH_FILE, e.type);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,9 +27,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.NO_SUCH_FILE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.NO_SUCH_FILE, e.type);
         }
 
     }
@@ -39,9 +39,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
@@ -51,9 +51,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
@@ -63,9 +63,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
@@ -75,9 +75,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
@@ -87,9 +87,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
@@ -98,9 +98,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
@@ -110,9 +110,9 @@ public class StateTestCases {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
             Assert.assertEquals("HAPPY", stateCensusAnalyser.getCountOfRecords(29, SAMPLE_CSV_PATH, className));
-        } catch (CustomException e) {
+        } catch (StateCensusException e) {
             System.out.println(e.getMessage());
-            Assert.assertEquals(CustomException.ExceptionType.INCORRECT_TYPE, e.type);
+            Assert.assertEquals(StateCensusException.ExceptionType.INCORRECT_TYPE, e.type);
         }
 
     }
